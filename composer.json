@@ -1,0 +1,14 @@
+{
+    "name": "wangwang0555/ecloanmq",
+    "description": "php rabbitmq",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "wangwang0555",
+            "email": "527011152@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
