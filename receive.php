@@ -4,7 +4,6 @@
  * 
  * @author chenwang
  */
-require 'lib/order.php';
 set_time_limit ( 0 );
 // 配置信息
 $conn_args = array (
@@ -59,6 +58,7 @@ function processMessage($envelope, $queue) { // 处理订单
 		$staTime = microtime ( true );
 		$array = json_decode ( denData ( $msg ) );
 		if (! empty ( $array )) { // 数据解析正常
+			//业务逻辑代码-根据自身项目需求修改start
 			$orderDao = new orderDao ();
 			foreach ( $array->trades as $val ) { // 主订单
 				// 添加子订单信息
@@ -69,6 +69,7 @@ function processMessage($envelope, $queue) { // 处理订单
 						$orderDao->childorderMothAdd ($child, $check );
 					}
 			}
+			//end
 		}
 		// 程序执行结束时间
 		$xcTime = microtime ( true ) - $staTime;
