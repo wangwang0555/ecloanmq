@@ -1,7 +1,7 @@
 <?php
 /**
   	 * PHP amqp(RabbitMQ) 发送数据
-  	 * @author  chenwang
+  	 * @author  chenwang v2版本
  	 */
 // 配置信息
 $conn_args = array (
